@@ -16,8 +16,6 @@ jobs:
         with:
           distribution: temurin
           java-version: 11
-      - name: setup jdk
-        uses: android-actions/setup-android@main
       - name: Setup Haxe
         uses: krdlab/setup-haxe@v1.1.5
         with:
