@@ -31,9 +31,10 @@ jobs:
           haxelib install flixel-ui
           haxelib install hscript
           haxelib install flixel-addons 2.11.0
-          haxelib git extension-videoview https://github.com/zatrit/extension-videoview.git
-          haxelib git linc_luajit https://github.com/superpowers04/linc_luajit.git
-          haxelib git extension-androidtools https://github.com/MaysLastPlay77/extension-androidtools.git
+          haxelib git extension-videoview https://github.com/zatrit/extension-videoview
+          haxelib git linc_luajit https://github.com/superpowers04/linc_luajit
+          haxelib git polymod https://github.com/larsiusprime/polymod
+          haxelib git extension-androidtools https://github.com/MaysLastPlay77/extension-androidtools
           haxelib list
 
       - name: Create Version Tag
@@ -55,5 +56,5 @@ jobs:
       - name: build publish
         uses: actions/upload-artifact@main
         with:
-          name: androidBuild
+          name: build
           path: export/release/android/bin/app/build/outputs/apk/debug
